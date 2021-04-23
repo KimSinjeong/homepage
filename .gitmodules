@@ -1,3 +1,9 @@
 [submodule "themes/bento"]
 	path = themes/bento
 	url = https://github.com/leonardofaria/bento.git
+[submodule "themes/hugo-stellar-theme"]
+	path = themes/hugo-stellar-theme
+	url = https://github.com/antonpolishko/hugo-stellar-theme
+[submodule "themes/hugo-scroll"]
+	path = themes/hugo-scroll
+	url = https://github.com/janraasch/hugo-scroll.git

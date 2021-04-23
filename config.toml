@@ -1,86 +1,41 @@
-theme = "bento"
-languageCode = "en-us"
-baseurl = "/"
-title = "Bento"
+baseURL = "/"
 
-author = "Leonardo Faria"
-copyright = "MIT"
+# This is a "one page"-website, so we do not need these kinds of pages...
+disableKinds = ["section", "taxonomy", "term", "RSS", "robotsTXT"]
 
-[taxonomies]
-category = "categories"
-tag = "tags"
+defaultContentLanguage = "en"
 
-# Better code higlighting
-# via https://discourse.gohugo.io/t/pygmentscodefences-how-to-choose-themes/3842/3
-pygmentsCodefences = true
-pygmentsStyle = "vs"
+# The name of this wonderful theme ;-).
+theme = "hugo-scroll"
 
-# Integrations
-googleAnalytics = "UA-XXXXXX-YY"
-disqusShortname = "bento-hugo-theme"
-
-# Hightlight theme
-[markup.highlight]
-  style = "github"
-
-# Allow HTML rendering inside markdown
-[markup.goldmark.renderer]
-  unsafe = true
+# The "title" of your website
+title = "Shinjeong Kim"
 
 [params]
-  # Show intro in the home page (with headline and description)
-  intro = true
-  headline = "This is a headline"
-  description = "A minimalist theme for Hugo, build with Tailwind CSS."
+    # A "copyright"-line to be added at the bottom of the page.
+    # Hint: Markdown is supported in here as well. So you may e.g. add a link to your legal imprint-page.
+    copyright = "© Shinjeong Kim"
 
-  # Copyright note in the footer
-  copyright = "Copyright © 2020 Someone"
+    # The "description" of your website. This is used in the meta data of your generated html.
+    description = "CS and EE majoring student"
 
-  # Image in the homepage. You can setup a different image for social media
-  cover = "images/vancouver.jpg"
-  ogImage = "images/og_image.jpg"
+    # The path to your "favicon". This should be a square (at least 32px x 32px) png-file.
+    favicon = "images/favicon.png"
 
-  # Social media usernames
-  github = "XXXX"
-  twitter = "XXXX"
-  linkedin = "https://linkedin.com/in/XXXX"
-  email = "email@xxxx.com"
+    # These "images" are used for the structured data templates. This will show up, when
+    # services like Twitter or Slack want to generate a preview of a linkto your site.
+    # See https://gohugo.io/templates/internal#twitter-cards and
+    # https://gohugo.io/templates/internal#open-graph.
+    images = ["images/cover-image.jpg"]
 
-  # Learn more about webmention 
-  # https://sebastiandedeyne.com/adding-webmentions-to-my-blog/
-  # webmention = ""
-  # productionBaseUrl is need if you want to receive webmentions in local environment
-  # productionBaseUrl = "https://yourwebsite.com"
+    # Another "title" :-). This one is used as the site_name on the Hugo's internal
+    # opengraph structured data template.
+    # See https://ogp.me/ and https://gohugo.io/templates/internal#open-graph.
+    title = "SJ Kim"
 
-  # Avatar (shown in the homepage)
-  avatar = "images/avatar.jpg"
-  # Bio is shown in the end of posts
-  authorBio = "Bento is a doggo who likes to code. Follow him on <a href='#'>Twitter</a>"
+    # This theme will, by default, inject a design-by-line at the bottom of the page.
+    # You can turn it off, but we would really appreciate if you don’t :-)
+    # hidedesignbyline = true
 
-# If you want to use fathom (https://usefathom.com) for analytics, add this section
-[params.fathomAnalytics]
-  siteID = "XXXXX"
-  # Default value is cdn.usefathom.com, overwrite this if you are self-hosting
-  serverURL = "analytics.example.com"
-
-# If you want to use umami (https://umami.is/) for analytics, add this section
-[params.umami]
-  siteID = "XXXXX"
-  trackerScript = "//umami.example.com/umami.js"
-
-# Items in the top menu
-[menu]
-  [[menu.main]]
-      name = "About"
-      url = "/about"
-      weight = 1
-
-  [[menu.main]]
-      name = "Archives"
-      url = "/archives"
-      weight = 1
-
-  [[menu.main]]
-      name = "Source code"
-      url = "https://github.com/leonardofaria/bento"
-      weight = 1
+    [params.meta]
+        keywords = "some, keywords, for, seo, you, know, google, duckduckgo, and, such"
